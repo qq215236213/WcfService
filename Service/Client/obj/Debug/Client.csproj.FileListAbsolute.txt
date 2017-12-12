@@ -8,3 +8,13 @@ G:\Projects\Service\Client\obj\Debug\Client.pdb
 G:\Projects\Service\Client\bin\Debug\Service.exe
 G:\Projects\Service\Client\bin\Debug\Service.pdb
 G:\Projects\Service\Client\bin\Debug\Service.exe.config
+C:\Users\dell-64\Desktop\WcfService\Service\Client\bin\Debug\Client.exe.config
+C:\Users\dell-64\Desktop\WcfService\Service\Client\bin\Debug\Client.exe
+C:\Users\dell-64\Desktop\WcfService\Service\Client\bin\Debug\Client.pdb
+C:\Users\dell-64\Desktop\WcfService\Service\Client\bin\Debug\Service.exe
+C:\Users\dell-64\Desktop\WcfService\Service\Client\bin\Debug\Service.pdb
+C:\Users\dell-64\Desktop\WcfService\Service\Client\bin\Debug\Service.exe.config
+C:\Users\dell-64\Desktop\WcfService\Service\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\dell-64\Desktop\WcfService\Service\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\dell-64\Desktop\WcfService\Service\Client\obj\Debug\Client.exe
+C:\Users\dell-64\Desktop\WcfService\Service\Client\obj\Debug\Client.pdb
