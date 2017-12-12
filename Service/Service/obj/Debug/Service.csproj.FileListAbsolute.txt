@@ -1,0 +1,7 @@
+G:\Projects\Service\Service\bin\Debug\Service.exe.config
+G:\Projects\Service\Service\bin\Debug\Service.exe
+G:\Projects\Service\Service\bin\Debug\Service.pdb
+G:\Projects\Service\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
+G:\Projects\Service\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
+G:\Projects\Service\Service\obj\Debug\Service.exe
+G:\Projects\Service\Service\obj\Debug\Service.pdb

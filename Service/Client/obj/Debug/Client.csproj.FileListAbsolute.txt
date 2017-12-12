@@ -1,0 +1,10 @@
+G:\Projects\Service\Client\bin\Debug\Client.exe.config
+G:\Projects\Service\Client\bin\Debug\Client.exe
+G:\Projects\Service\Client\bin\Debug\Client.pdb
+G:\Projects\Service\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+G:\Projects\Service\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+G:\Projects\Service\Client\obj\Debug\Client.exe
+G:\Projects\Service\Client\obj\Debug\Client.pdb
+G:\Projects\Service\Client\bin\Debug\Service.exe
+G:\Projects\Service\Client\bin\Debug\Service.pdb
+G:\Projects\Service\Client\bin\Debug\Service.exe.config
