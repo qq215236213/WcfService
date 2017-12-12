@@ -18,3 +18,5 @@ C:\Users\dell-64\Desktop\WcfService\Service\Client\obj\Debug\Client.csprojResolv
 C:\Users\dell-64\Desktop\WcfService\Service\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
 C:\Users\dell-64\Desktop\WcfService\Service\Client\obj\Debug\Client.exe
 C:\Users\dell-64\Desktop\WcfService\Service\Client\obj\Debug\Client.pdb
+C:\Users\aoyo\Desktop\WcfService\Service\Client\bin\Debug\Client.exe
+C:\Users\aoyo\Desktop\WcfService\Service\Client\bin\Debug\Service.exe

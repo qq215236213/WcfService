@@ -1,1 +1,7 @@
 *.lock
+/service/client/bin/*
+/service/client/obj/*
+/service/service/bin/*
+/service/service/obj/*
+/WebApplication1/bin/*
+/WebApplication1/obj/*
