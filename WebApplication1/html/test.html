@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div style="width:500px;margin:120px auto">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <input class="form-control"  id="user" type="text" placeholder="user"/>
+            </div>
+            <div class="form-group">
+                <input class="btn btn-primary" id="conn" type="button" value="连接" />
+            </div>
+            <div class="form-group">
+                <input class="btn btn-default" id="close" type="button"  value="关闭" />
+            </div>
+            <div class="form-group">
+                <span id="tips"></span>
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="content" type="text" placeholder="内容"/>
+            </div>
+            <div class="form-group">
+                <input class="btn btn-primary" id="send" type="button"  value="发送" />
+            </div>
+            <div class="form-group">
+                <div id="msg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            var ws;
+            $('#conn').click(function () {
+                ws = new WebSocket('ws://localhost:28801/Handler1.ashx?user=' + $('#user').val());
+                $('#msg').append('<p>正在連接</p>');
+
+                ws.onopen = function () {
+                    $('#msg').append('<p>已经连接</p>');
+                }
+                ws.onmessage = function (evt) {
+                    console.log(evt.data)
+                    $('#msg').append('<p>' + evt.data + '</p>');
+                }
+                ws.onerror = function (evt) {
+                    $('#msg').append('<p>' + JSON.stringify(evt) + '</p>');
+                }
+                ws.onclose = function () {
+                    $('#msg').append('<p>已经关闭</p>');
+                }
+            });
+
+            $('#close').click(function () {
+                ws.close();
+            });
+            $('#send').click(function () {
+                if (ws.readyState == WebSocket.OPEN) {
+                    ws.send($('#content').val());
+                }
+                else {
+                    $('#tips').text('连接已经关闭');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
