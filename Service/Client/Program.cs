@@ -37,20 +37,25 @@ namespace Client
 			//	Console.Read();
 			//}
 
-			using (ChannelFactory<ServiceRef.IMyService1> factory = new ChannelFactory<ServiceRef.IMyService1>("NetTcpBinding_IMyService1"))
+			ChannelFactory<ServiceRef.IMyService1> factory = new ChannelFactory<ServiceRef.IMyService1>("NetTcpBinding_IMyService1");
+			
+			var client = factory.CreateChannel();
+			var stu = client.GetStudentInfo();
+
+			string msg = "学生姓名：{0}\n联系电话：{1}\n" +
+					"地址信息：-----------\n" +
+					"省份：{2}\n" +
+					"市区：{3}\n" +
+					"详细地址：{4}";
+			Console.WriteLine(msg, stu.Name, stu.Phone, stu.Address.Province, stu.Address.City, stu.Address.DetailAddr);
+			var disObj = client as IDisposable;
+			if (disObj != null	)
 			{
-				var client = factory.CreateChannel();
-				var stu = client.GetStudentInfo();
-
-				string msg = "学生姓名：{0}\n联系电话：{1}\n" +
-						"地址信息：-----------\n" +
-						"省份：{2}\n" +
-						"市区：{3}\n" +
-						"详细地址：{4}";
-				Console.WriteLine(msg, stu.Name, stu.Phone, stu.Address.Province, stu.Address.City, stu.Address.DetailAddr);
-
-				Console.Read();
+				disObj.Dispose();
 			}
+			factory.Close();
+				Console.Read();
+			
         }
     }
     

@@ -12,3 +12,9 @@ C:\Users\dell-64\Desktop\WcfService\Service\Service\obj\Debug\Service.csprojReso
 C:\Users\dell-64\Desktop\WcfService\Service\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
 C:\Users\dell-64\Desktop\WcfService\Service\Service\obj\Debug\Service.exe
 C:\Users\dell-64\Desktop\WcfService\Service\Service\obj\Debug\Service.pdb
+C:\Users\aoyo\Desktop\WcfService\Service\Service\bin\Debug\Service.exe.config
+C:\Users\aoyo\Desktop\WcfService\Service\Service\bin\Debug\Service.exe
+C:\Users\aoyo\Desktop\WcfService\Service\Service\bin\Debug\Service.pdb
+C:\Users\aoyo\Desktop\WcfService\Service\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
+C:\Users\aoyo\Desktop\WcfService\Service\Service\obj\Debug\Service.exe
+C:\Users\aoyo\Desktop\WcfService\Service\Service\obj\Debug\Service.pdb
