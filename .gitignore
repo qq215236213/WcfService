@@ -9,3 +9,5 @@
 /service/OtherClient/obj/*
 /service/OtherService/bin/*
 /service/OtherService/obj/*
+/service/ClassLibrary/obj/*
+/service/ClassLibrary/bin/*
