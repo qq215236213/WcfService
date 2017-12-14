@@ -11,3 +11,5 @@
 /service/OtherService/obj/*
 /service/ClassLibrary/obj/*
 /service/ClassLibrary/bin/*
+/service/WindowsFormClient/bin/*
+/service/WindowsFormClient/obj/*
