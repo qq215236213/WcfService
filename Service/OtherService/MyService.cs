@@ -29,12 +29,12 @@ namespace OtherService
 			bool isSuccess = false;
 			try
 			{
-				using(var outputStream = new FileStream("", FileMode.OpenOrCreate, FileAccess.Write))
+				using(var outputStream = new FileStream("haha.jpg", FileMode.OpenOrCreate, FileAccess.Write))
 				{
 					streamInput.CopyTo(outputStream);
 					outputStream.Flush();
 					isSuccess = true;
-					Console.WriteLine("在{0}接收到客户端发送的流，已保存到rec.map3。", DateTime.Now.ToLongTimeString());
+					Console.WriteLine("在{0}接收到客户端发送的流，已保存到haha.jpg。", DateTime.Now.ToLongTimeString());
 				}
 			}
 			catch(Exception ex)

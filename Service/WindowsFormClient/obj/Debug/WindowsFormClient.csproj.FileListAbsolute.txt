@@ -1,0 +1,9 @@
+C:\Users\aoyo\Desktop\WcfService\Service\WindowsFormClient\bin\Debug\WindowsFormClient.exe.config
+C:\Users\aoyo\Desktop\WcfService\Service\WindowsFormClient\bin\Debug\WindowsFormClient.exe
+C:\Users\aoyo\Desktop\WcfService\Service\WindowsFormClient\bin\Debug\WindowsFormClient.pdb
+C:\Users\aoyo\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsFormClient.csprojResolveAssemblyReference.cache
+C:\Users\aoyo\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsFormClient.Form1.resources
+C:\Users\aoyo\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsFormClient.Properties.Resources.resources
+C:\Users\aoyo\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsFormClient.csproj.GenerateResource.Cache
+C:\Users\aoyo\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsFormClient.exe
+C:\Users\aoyo\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsFormClient.pdb
