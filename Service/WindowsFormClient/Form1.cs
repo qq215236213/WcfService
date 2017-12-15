@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,14 +35,23 @@ namespace WindowsFormClient
 			{
 				return;
 			}
-
+            
 			FileStream fs = new FileStream(this.label1.Text, FileMode.Open, FileAccess.Read);
-			ServiceReference1.ServiceClient client = new ServiceReference1.ServiceClient();
+            var tMsg = new TransferFileMessage
+            {
+                File_Name = this.label1.Text,
+                File_Stream = fs
+            };
+            ServiceReference1.ServiceClient client = new ServiceReference1.ServiceClient();
 			this.button2.Enabled = false;
-			var res = await client.UpLoadFileAsync(fs);
+            var res = await client.UpLoadFileAsync(Path.GetFileName(tMsg.File_Name), tMsg.File_Stream);
 			this.button2.Enabled = true;
-			if (res == true)
+			if (res.IsSuccessed == true)
 				this.label2.Text = "上传完成。";
+            else
+            {
+                this.label2.Text = res.ErrorMsg;
+            }
 			fs.Close();
 
 			client.Close();

@@ -16,18 +16,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpLoadFile">
+  <xs:element name="TransferFileMessage">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.microsoft.com/Message" name="streamInput" type="q1:StreamBody" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/Message" name="File_Stream" type="q1:StreamBody" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpLoadFileResponse">
+  <xs:element name="File_Name" nillable="true" type="xs:string" />
+  <xs:element name="ResultMessage">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="UpLoadFileResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsSuccessed" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ErrorMsg" nillable="true" type="xs:string" />
 </xs:schema>

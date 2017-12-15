@@ -7,3 +7,15 @@ C:\Users\aoyo\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsForm
 C:\Users\aoyo\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsFormClient.csproj.GenerateResource.Cache
 C:\Users\aoyo\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsFormClient.exe
 C:\Users\aoyo\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsFormClient.pdb
+C:\Users\dell-64\Desktop\WcfService\Service\WindowsFormClient\bin\Debug\WindowsFormClient.exe.config
+C:\Users\dell-64\Desktop\WcfService\Service\WindowsFormClient\bin\Debug\WindowsFormClient.exe
+C:\Users\dell-64\Desktop\WcfService\Service\WindowsFormClient\bin\Debug\WindowsFormClient.pdb
+C:\Users\dell-64\Desktop\WcfService\Service\WindowsFormClient\bin\Debug\ClassLibrary.dll
+C:\Users\dell-64\Desktop\WcfService\Service\WindowsFormClient\bin\Debug\ClassLibrary.pdb
+C:\Users\dell-64\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsFormClient.csprojResolveAssemblyReference.cache
+C:\Users\dell-64\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsFormClient.Form1.resources
+C:\Users\dell-64\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsFormClient.Properties.Resources.resources
+C:\Users\dell-64\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsFormClient.csproj.GenerateResource.Cache
+C:\Users\dell-64\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsFormClient.csproj.CoreCompileInputs.cache
+C:\Users\dell-64\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsFormClient.exe
+C:\Users\dell-64\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsFormClient.pdb

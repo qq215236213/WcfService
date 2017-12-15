@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,8 +15,11 @@ namespace OtherService
 		[OperationContract]
 		int AddInt(int a, int b);
 
-		[OperationContract]
+		
 		bool UpLoadFile(Stream streamInput);
+
+        [OperationContract]
+        ResultMessage UpLoadFile(TransferFileMessage tMsg);
 	}
 	public class MyService : IService
 	{
@@ -45,5 +49,34 @@ namespace OtherService
 
 			return isSuccess;
 		}
-	}
+
+        public ResultMessage UpLoadFile(TransferFileMessage tMsg)
+        {
+            var result = new ResultMessage();
+            if(tMsg == null || tMsg.File_Stream == null)
+            {
+                result.IsSuccessed = false;
+                result.ErrorMsg = "传入的参数无效。";
+                return result;
+            }
+
+            try
+            {
+                using(FileStream fs = new FileStream(tMsg.File_Name, FileMode.OpenOrCreate, FileAccess.Write))
+                {
+                    tMsg.File_Stream.CopyTo(fs);
+                    fs.Flush();
+                    result.IsSuccessed = true;
+                    Console.WriteLine("在{0}接收到客户端发送的流，已保存到{1}。", DateTime.Now.ToLongTimeString(), tMsg.File_Name);
+                }
+            }
+            catch(Exception ex)
+            {
+                result.IsSuccessed = false;
+                result.ErrorMsg = ex.Message;
+            }
+
+            return result;
+        }
+    }
 }

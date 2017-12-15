@@ -13,11 +13,17 @@
   <wsdl:message name="IService_AddInt_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddIntResponse" />
   </wsdl:message>
-  <wsdl:message name="IService_UpLoadFile_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpLoadFile" />
+  <wsdl:message name="TransferFileMessage">
+    <wsdl:part name="parameters" element="tns:TransferFileMessage" />
   </wsdl:message>
-  <wsdl:message name="IService_UpLoadFile_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpLoadFileResponse" />
+  <wsdl:message name="TransferFileMessage_Headers">
+    <wsdl:part name="File_Name" element="tns:File_Name" />
+  </wsdl:message>
+  <wsdl:message name="ResultMessage">
+    <wsdl:part name="parameters" element="tns:ResultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ResultMessage_Headers">
+    <wsdl:part name="ErrorMsg" element="tns:ErrorMsg" />
   </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="AddInt">
@@ -25,8 +31,8 @@
       <wsdl:output wsaw:Action="http://tempuri.org/IService/AddIntResponse" message="tns:IService_AddInt_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="UpLoadFile">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpLoadFile" message="tns:IService_UpLoadFile_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpLoadFileResponse" message="tns:IService_UpLoadFile_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpLoadFile" name="TransferFileMessage" message="tns:TransferFileMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpLoadFileResponse" name="ResultMessage" message="tns:ResultMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
@@ -42,10 +48,12 @@
     </wsdl:operation>
     <wsdl:operation name="UpLoadFile">
       <soap:operation soapAction="http://tempuri.org/IService/UpLoadFile" style="document" />
-      <wsdl:input>
+      <wsdl:input name="TransferFileMessage">
+        <soap:header message="tns:TransferFileMessage_Headers" part="File_Name" use="literal" />
         <soap:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
+      <wsdl:output name="ResultMessage">
+        <soap:header message="tns:ResultMessage_Headers" part="ErrorMsg" use="literal" />
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
