@@ -37,14 +37,9 @@ namespace WindowsFormClient
 			}
             
 			FileStream fs = new FileStream(this.label1.Text, FileMode.Open, FileAccess.Read);
-            var tMsg = new TransferFileMessage
-            {
-                File_Name = this.label1.Text,
-                File_Stream = fs
-            };
             ServiceReference1.ServiceClient client = new ServiceReference1.ServiceClient();
 			this.button2.Enabled = false;
-            var res = await client.UpLoadFileAsync(Path.GetFileName(tMsg.File_Name), tMsg.File_Stream);
+            var res = await client.UpLoadFileAsync(Path.GetFileName(this.label1.Text), fs);
 			this.button2.Enabled = true;
 			if (res.IsSuccessed == true)
 				this.label2.Text = "上传完成。";
