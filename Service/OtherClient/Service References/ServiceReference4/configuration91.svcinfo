@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="3fqAwU8dqLFGi9TJB6TlXV++QQw=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="xMNyxvnQvp4fhBEJ5aTBSCb4eM4=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="wsHttpBinding" name="WSHttpBinding_IHelloService">
       <properties>
@@ -127,7 +127,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="WSHttpBinding_IHelloService" contract="ServiceReference3.IHelloService" bindingType="wsHttpBinding" address="http://localhost:1410/helloservice" bindingConfiguration="WSHttpBinding_IHelloService">
+    <endpoint name="WSHttpBinding_IHelloService" contract="ServiceReference4.IHelloService" bindingType="wsHttpBinding" address="http://localhost:1410/helloservice" bindingConfiguration="WSHttpBinding_IHelloService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:1410/helloservice</serializedValue>
@@ -142,7 +142,7 @@
           <serializedValue>WSHttpBinding_IHelloService</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ServiceReference3.IHelloService</serializedValue>
+          <serializedValue>ServiceReference4.IHelloService</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

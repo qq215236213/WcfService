@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OtherClient.ServiceReference3 {
+namespace OtherClient.ServiceReference4 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference3.IHelloService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference4.IHelloService")]
     public interface IHelloService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHelloService/AddInt", ReplyAction="http://tempuri.org/IHelloService/AddIntResponse")]
@@ -29,10 +29,10 @@ namespace OtherClient.ServiceReference3 {
         
         // CODEGEN: 消息 CalculationRequest 的包装名称(CalculationRequest)以后生成的消息协定与默认值(ComputingNumbers)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHelloService/ComputingNumbers", ReplyAction="http://tempuri.org/IHelloService/ComputingNumbersResponse")]
-        OtherClient.ServiceReference3.CallResultResponse ComputingNumbers(OtherClient.ServiceReference3.CalculationRequest request);
+        OtherClient.ServiceReference4.CallResultResponse ComputingNumbers(OtherClient.ServiceReference4.CalculationRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHelloService/ComputingNumbers", ReplyAction="http://tempuri.org/IHelloService/ComputingNumbersResponse")]
-        System.Threading.Tasks.Task<OtherClient.ServiceReference3.CallResultResponse> ComputingNumbersAsync(OtherClient.ServiceReference3.CalculationRequest request);
+        System.Threading.Tasks.Task<OtherClient.ServiceReference4.CallResultResponse> ComputingNumbersAsync(OtherClient.ServiceReference4.CalculationRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -78,12 +78,12 @@ namespace OtherClient.ServiceReference3 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IHelloServiceChannel : OtherClient.ServiceReference3.IHelloService, System.ServiceModel.IClientChannel {
+    public interface IHelloServiceChannel : OtherClient.ServiceReference4.IHelloService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class HelloServiceClient : System.ServiceModel.ClientBase<OtherClient.ServiceReference3.IHelloService>, OtherClient.ServiceReference3.IHelloService {
+    public partial class HelloServiceClient : System.ServiceModel.ClientBase<OtherClient.ServiceReference4.IHelloService>, OtherClient.ServiceReference4.IHelloService {
         
         public HelloServiceClient() {
         }
@@ -121,30 +121,30 @@ namespace OtherClient.ServiceReference3 {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OtherClient.ServiceReference3.CallResultResponse OtherClient.ServiceReference3.IHelloService.ComputingNumbers(OtherClient.ServiceReference3.CalculationRequest request) {
+        OtherClient.ServiceReference4.CallResultResponse OtherClient.ServiceReference4.IHelloService.ComputingNumbers(OtherClient.ServiceReference4.CalculationRequest request) {
             return base.Channel.ComputingNumbers(request);
         }
         
         public int ComputingNumbers(int NumberA, int NumberB, string Operation) {
-            OtherClient.ServiceReference3.CalculationRequest inValue = new OtherClient.ServiceReference3.CalculationRequest();
+            OtherClient.ServiceReference4.CalculationRequest inValue = new OtherClient.ServiceReference4.CalculationRequest();
             inValue.NumberA = NumberA;
             inValue.NumberB = NumberB;
             inValue.Operation = Operation;
-            OtherClient.ServiceReference3.CallResultResponse retVal = ((OtherClient.ServiceReference3.IHelloService)(this)).ComputingNumbers(inValue);
+            OtherClient.ServiceReference4.CallResultResponse retVal = ((OtherClient.ServiceReference4.IHelloService)(this)).ComputingNumbers(inValue);
             return retVal.ComputedResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OtherClient.ServiceReference3.CallResultResponse> OtherClient.ServiceReference3.IHelloService.ComputingNumbersAsync(OtherClient.ServiceReference3.CalculationRequest request) {
+        System.Threading.Tasks.Task<OtherClient.ServiceReference4.CallResultResponse> OtherClient.ServiceReference4.IHelloService.ComputingNumbersAsync(OtherClient.ServiceReference4.CalculationRequest request) {
             return base.Channel.ComputingNumbersAsync(request);
         }
         
-        public System.Threading.Tasks.Task<OtherClient.ServiceReference3.CallResultResponse> ComputingNumbersAsync(int NumberA, int NumberB, string Operation) {
-            OtherClient.ServiceReference3.CalculationRequest inValue = new OtherClient.ServiceReference3.CalculationRequest();
+        public System.Threading.Tasks.Task<OtherClient.ServiceReference4.CallResultResponse> ComputingNumbersAsync(int NumberA, int NumberB, string Operation) {
+            OtherClient.ServiceReference4.CalculationRequest inValue = new OtherClient.ServiceReference4.CalculationRequest();
             inValue.NumberA = NumberA;
             inValue.NumberB = NumberB;
             inValue.Operation = Operation;
-            return ((OtherClient.ServiceReference3.IHelloService)(this)).ComputingNumbersAsync(inValue);
+            return ((OtherClient.ServiceReference4.IHelloService)(this)).ComputingNumbersAsync(inValue);
         }
     }
 }

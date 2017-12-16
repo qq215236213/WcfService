@@ -16,23 +16,38 @@ namespace ClassLibrary
 	{
 		public void AfterReceiveReply(ref Message reply, object correlationState)
 		{
-			Console.WriteLine("客户端接收到的回复：\n{0}", reply.ToString());
+			//Console.WriteLine("客户端接收到的回复：\n{0}", reply.ToString());
 		}
 
 		public object AfterReceiveRequest(ref Message request, IClientChannel channel, InstanceContext instanceContext)
 		{
-			Console.WriteLine("客户端发送请求前的SOAP消息：\n{0}", request.ToString());
+			//Console.WriteLine("客户端发送请求前的SOAP消息：\n{0}", request.ToString());
+			// 检查验证信息
+
+			//string header = request.Headers.GetHeader<string>(MyCustomHeader.HeaderTitle,MyCustomHeader.HeaderNS);
+			//if (header == "admin")
+			//{
+			//	Console.WriteLine("用户名和密码正确。");
+			//}
+			//else
+			//{
+			//	throw new Exception("验证失败，滚吧！");
+			//}
 			return null;
 		}
 
 		public void BeforeSendReply(ref Message reply, object correlationState)
 		{
-			Console.WriteLine("服务器即将作出以下回复：\n{0}", reply.ToString());
+			//Console.WriteLine("服务器即将作出以下回复：\n{0}", reply.ToString());
 		}
 
 		public object BeforeSendRequest(ref Message request, IClientChannel channel)
 		{
-			Console.WriteLine("服务器端：接收到的请求：\n{0}", request.ToString());
+			//Console.WriteLine("服务器端：接收到的请求：\n{0}", request.ToString());
+			// 插入验证信息
+			MessageHeader hdUserName = MessageHeader.CreateHeader(MyCustomHeader.HeaderTitle, MyCustomHeader.HeaderNS, "admin");
+			request.Headers.Add(hdUserName);
+
 			return null;
 		}
 	}
