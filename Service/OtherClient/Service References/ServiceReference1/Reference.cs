@@ -20,6 +20,55 @@ namespace OtherClient.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddInt", ReplyAction="http://tempuri.org/IService/AddIntResponse")]
         System.Threading.Tasks.Task<int> AddIntAsync(int a, int b);
+        
+        // CODEGEN: 消息 TransferFileMessage 的包装名称(TransferFileMessage)以后生成的消息协定与默认值(UpLoadFile)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpLoadFile", ReplyAction="http://tempuri.org/IService/UpLoadFileResponse")]
+        OtherClient.ServiceReference1.ResultMessage UpLoadFile(OtherClient.ServiceReference1.TransferFileMessage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpLoadFile", ReplyAction="http://tempuri.org/IService/UpLoadFileResponse")]
+        System.Threading.Tasks.Task<OtherClient.ServiceReference1.ResultMessage> UpLoadFileAsync(OtherClient.ServiceReference1.TransferFileMessage request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="TransferFileMessage", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class TransferFileMessage {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://tempuri.org/")]
+        public string File_Name;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public System.IO.Stream File_Stream;
+        
+        public TransferFileMessage() {
+        }
+        
+        public TransferFileMessage(string File_Name, System.IO.Stream File_Stream) {
+            this.File_Name = File_Name;
+            this.File_Stream = File_Stream;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ResultMessage", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class ResultMessage {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://tempuri.org/")]
+        public string ErrorMsg;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public bool IsSuccessed;
+        
+        public ResultMessage() {
+        }
+        
+        public ResultMessage(string ErrorMsg, bool IsSuccessed) {
+            this.ErrorMsg = ErrorMsg;
+            this.IsSuccessed = IsSuccessed;
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +104,32 @@ namespace OtherClient.ServiceReference1 {
         
         public System.Threading.Tasks.Task<int> AddIntAsync(int a, int b) {
             return base.Channel.AddIntAsync(a, b);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OtherClient.ServiceReference1.ResultMessage OtherClient.ServiceReference1.IService.UpLoadFile(OtherClient.ServiceReference1.TransferFileMessage request) {
+            return base.Channel.UpLoadFile(request);
+        }
+        
+        public string UpLoadFile(string File_Name, System.IO.Stream File_Stream, out bool IsSuccessed) {
+            OtherClient.ServiceReference1.TransferFileMessage inValue = new OtherClient.ServiceReference1.TransferFileMessage();
+            inValue.File_Name = File_Name;
+            inValue.File_Stream = File_Stream;
+            OtherClient.ServiceReference1.ResultMessage retVal = ((OtherClient.ServiceReference1.IService)(this)).UpLoadFile(inValue);
+            IsSuccessed = retVal.IsSuccessed;
+            return retVal.ErrorMsg;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OtherClient.ServiceReference1.ResultMessage> OtherClient.ServiceReference1.IService.UpLoadFileAsync(OtherClient.ServiceReference1.TransferFileMessage request) {
+            return base.Channel.UpLoadFileAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OtherClient.ServiceReference1.ResultMessage> UpLoadFileAsync(string File_Name, System.IO.Stream File_Stream) {
+            OtherClient.ServiceReference1.TransferFileMessage inValue = new OtherClient.ServiceReference1.TransferFileMessage();
+            inValue.File_Name = File_Name;
+            inValue.File_Stream = File_Stream;
+            return ((OtherClient.ServiceReference1.IService)(this)).UpLoadFileAsync(inValue);
         }
     }
 }

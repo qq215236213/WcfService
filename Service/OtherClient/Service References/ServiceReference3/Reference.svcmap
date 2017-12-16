@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1800a4c4-5f54-449b-b1ba-f40c7764dcb2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ArrayList" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1410/helloservice" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="helloservice.xsd" MetadataType="Schema" ID="0459f382-03ec-48ea-92cc-14d061944616" SourceId="1" SourceUrl="http://localhost:1410/helloservice?xsd=xsd2" />
+    <MetadataFile FileName="helloservice.disco" MetadataType="Disco" ID="34ebc1f8-5740-4240-a10a-6d150d19f017" SourceId="1" SourceUrl="http://localhost:1410/helloservice?disco" />
+    <MetadataFile FileName="helloservice1.xsd" MetadataType="Schema" ID="614a3715-249f-45f5-b577-1d84e0e20b29" SourceId="1" SourceUrl="http://localhost:1410/helloservice?xsd=xsd0" />
+    <MetadataFile FileName="HelloService.wsdl" MetadataType="Wsdl" ID="24003687-0d8e-4fa6-a0bd-a530f88604ce" SourceId="1" SourceUrl="http://localhost:1410/helloservice?wsdl" />
+    <MetadataFile FileName="helloservice2.xsd" MetadataType="Schema" ID="3c8b34eb-31d7-405f-8d18-1f399ac4f06e" SourceId="1" SourceUrl="http://localhost:1410/helloservice?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

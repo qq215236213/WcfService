@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CustomService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-  <wsp:Policy wsu:Id="WSHttpBinding_ICustomService_policy">
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="HelloService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IHelloService_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -96,7 +96,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_ICustomService_PostMessage_Input_policy">
+  <wsp:Policy wsu:Id="WSHttpBinding_IHelloService_AddInt_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -115,7 +115,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_ICustomService_PostMessage_output_policy">
+  <wsp:Policy wsu:Id="WSHttpBinding_IHelloService_AddInt_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -134,7 +134,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_ICustomService_GetPerson_Input_policy">
+  <wsp:Policy wsu:Id="WSHttpBinding_IHelloService_GetStudent_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -153,51 +153,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_ICustomService_GetPerson_output_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-          <sp:Header Name="Address" Namespace="http://tempuri.org/" />
-          <sp:Header Name="Zip" Namespace="http://tempuri.org/" />
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-          <sp:Header Name="Address" Namespace="http://tempuri.org/" />
-          <sp:Header Name="Zip" Namespace="http://tempuri.org/" />
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_ICustomService_CheckRenpin_Input_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-          <sp:Header Name="MaxNum" Namespace="http://tempuri.org/" />
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-          <sp:Header Name="MaxNum" Namespace="http://tempuri.org/" />
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_ICustomService_CheckRenpin_output_policy">
+  <wsp:Policy wsu:Id="WSHttpBinding_IHelloService_GetStudent_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -216,12 +172,11 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_ICustomService_SetWorkerInformation_Input_policy">
+  <wsp:Policy wsu:Id="WSHttpBinding_IHelloService_ComputingNumbers_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
-          <sp:Header Name="WorkerArtist" Namespace="http://tempuri.org/" />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
           <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
           <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -232,12 +187,11 @@
         </sp:SignedParts>
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
-          <sp:Header Name="WorkerArtist" Namespace="http://tempuri.org/" />
         </sp:EncryptedParts>
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_ICustomService_SetWorkerInformation_output_policy">
+  <wsp:Policy wsu:Id="WSHttpBinding_IHelloService_ComputingNumbers_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -258,114 +212,85 @@
   </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
-      <xsd:import schemaLocation="http://localhost:1379/services?xsd=xsd0" namespace="http://tempuri.org/" />
-      <xsd:import schemaLocation="http://localhost:1379/services?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:1379/services?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ClassLibrary" />
+      <xsd:import schemaLocation="http://localhost:1410/helloservice?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1410/helloservice?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1410/helloservice?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ClassLibrary" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="CarMessage">
-    <wsdl:part name="parameters" element="tns:CarMessage" />
+  <wsdl:message name="IHelloService_AddInt_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddInt" />
   </wsdl:message>
-  <wsdl:message name="ICustomService_PostMessage_OutputMessage" />
-  <wsdl:message name="ICustomService_GetPerson_InputMessage" />
-  <wsdl:message name="Person">
-    <wsdl:part name="parameters" element="tns:Person" />
+  <wsdl:message name="IHelloService_AddInt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddIntResponse" />
   </wsdl:message>
-  <wsdl:message name="Person_Headers">
-    <wsdl:part name="Address" element="tns:Address" />
-    <wsdl:part name="Zip" element="tns:Zip" />
+  <wsdl:message name="IHelloService_GetStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudent" />
   </wsdl:message>
-  <wsdl:message name="RequestMessage">
-    <wsdl:part name="parameters" element="tns:RequestMessage" />
+  <wsdl:message name="IHelloService_GetStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentResponse" />
   </wsdl:message>
-  <wsdl:message name="RequestMessage_Headers">
-    <wsdl:part name="MaxNum" element="tns:MaxNum" />
+  <wsdl:message name="CalculationRequest">
+    <wsdl:part name="parameters" element="tns:CalculationRequest" />
   </wsdl:message>
-  <wsdl:message name="ResponseMessage">
-    <wsdl:part name="parameters" element="tns:ResponseMessage" />
+  <wsdl:message name="CallResultResponse">
+    <wsdl:part name="parameters" element="tns:CallResultResponse" />
   </wsdl:message>
-  <wsdl:message name="Worker">
-    <wsdl:part name="parameters" element="tns:Worker" />
-  </wsdl:message>
-  <wsdl:message name="Worker_Headers">
-    <wsdl:part name="WorkerArtist" element="tns:WorkerArtist" />
-  </wsdl:message>
-  <wsdl:message name="ICustomService_SetWorkerInformation_OutputMessage" />
-  <wsdl:portType name="ICustomService">
-    <wsdl:operation name="PostMessage">
-      <wsdl:input wsaw:Action="http://tempuri.org/ICustomService/PostMessage" name="CarMessage" message="tns:CarMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ICustomService/PostMessageResponse" message="tns:ICustomService_PostMessage_OutputMessage" />
+  <wsdl:portType name="IHelloService">
+    <wsdl:operation name="AddInt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHelloService/AddInt" message="tns:IHelloService_AddInt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHelloService/AddIntResponse" message="tns:IHelloService_AddInt_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetPerson">
-      <wsdl:input wsaw:Action="http://tempuri.org/ICustomService/GetPerson" message="tns:ICustomService_GetPerson_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ICustomService/GetPersonResponse" name="Person" message="tns:Person" />
+    <wsdl:operation name="GetStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHelloService/GetStudent" message="tns:IHelloService_GetStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHelloService/GetStudentResponse" message="tns:IHelloService_GetStudent_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="CheckRenpin">
-      <wsdl:input wsaw:Action="http://tempuri.org/ICustomService/CheckRenpin" name="RequestMessage" message="tns:RequestMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ICustomService/CheckRenpinResponse" name="ResponseMessage" message="tns:ResponseMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="SetWorkerInformation">
-      <wsdl:input wsaw:Action="http://tempuri.org/ICustomService/SetWorkerInformation" name="Worker" message="tns:Worker" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ICustomService/SetWorkerInformationResponse" message="tns:ICustomService_SetWorkerInformation_OutputMessage" />
+    <wsdl:operation name="ComputingNumbers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHelloService/ComputingNumbers" name="CalculationRequest" message="tns:CalculationRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHelloService/ComputingNumbersResponse" name="CallResultResponse" message="tns:CallResultResponse" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="WSHttpBinding_ICustomService" type="tns:ICustomService">
-    <wsp:PolicyReference URI="#WSHttpBinding_ICustomService_policy" />
+  <wsdl:binding name="WSHttpBinding_IHelloService" type="tns:IHelloService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IHelloService_policy" />
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="PostMessage">
-      <soap12:operation soapAction="http://tempuri.org/ICustomService/PostMessage" style="document" />
-      <wsdl:input name="CarMessage">
-        <wsp:PolicyReference URI="#WSHttpBinding_ICustomService_PostMessage_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <wsp:PolicyReference URI="#WSHttpBinding_ICustomService_PostMessage_output_policy" />
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetPerson">
-      <soap12:operation soapAction="http://tempuri.org/ICustomService/GetPerson" style="document" />
+    <wsdl:operation name="AddInt">
+      <soap12:operation soapAction="http://tempuri.org/IHelloService/AddInt" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSHttpBinding_ICustomService_GetPerson_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="Person">
-        <wsp:PolicyReference URI="#WSHttpBinding_ICustomService_GetPerson_output_policy" />
-        <soap12:header message="tns:Person_Headers" part="Address" use="literal" />
-        <soap12:header message="tns:Person_Headers" part="Zip" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="CheckRenpin">
-      <soap12:operation soapAction="http://tempuri.org/ICustomService/CheckRenpin" style="document" />
-      <wsdl:input name="RequestMessage">
-        <wsp:PolicyReference URI="#WSHttpBinding_ICustomService_CheckRenpin_Input_policy" />
-        <soap12:header message="tns:RequestMessage_Headers" part="MaxNum" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="ResponseMessage">
-        <wsp:PolicyReference URI="#WSHttpBinding_ICustomService_CheckRenpin_output_policy" />
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="SetWorkerInformation">
-      <soap12:operation soapAction="http://tempuri.org/ICustomService/SetWorkerInformation" style="document" />
-      <wsdl:input name="Worker">
-        <wsp:PolicyReference URI="#WSHttpBinding_ICustomService_SetWorkerInformation_Input_policy" />
-        <soap12:header message="tns:Worker_Headers" part="WorkerArtist" use="literal" />
+        <wsp:PolicyReference URI="#WSHttpBinding_IHelloService_AddInt_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSHttpBinding_ICustomService_SetWorkerInformation_output_policy" />
+        <wsp:PolicyReference URI="#WSHttpBinding_IHelloService_AddInt_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudent">
+      <soap12:operation soapAction="http://tempuri.org/IHelloService/GetStudent" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#WSHttpBinding_IHelloService_GetStudent_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#WSHttpBinding_IHelloService_GetStudent_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComputingNumbers">
+      <soap12:operation soapAction="http://tempuri.org/IHelloService/ComputingNumbers" style="document" />
+      <wsdl:input name="CalculationRequest">
+        <wsp:PolicyReference URI="#WSHttpBinding_IHelloService_ComputingNumbers_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CallResultResponse">
+        <wsp:PolicyReference URI="#WSHttpBinding_IHelloService_ComputingNumbers_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
-  <wsdl:service name="CustomService">
-    <wsdl:port name="WSHttpBinding_ICustomService" binding="tns:WSHttpBinding_ICustomService">
-      <soap12:address location="http://localhost:1379/services" />
+  <wsdl:service name="HelloService">
+    <wsdl:port name="WSHttpBinding_IHelloService" binding="tns:WSHttpBinding_IHelloService">
+      <soap12:address location="http://localhost:1410/helloservice" />
       <wsa10:EndpointReference>
-        <wsa10:Address>http://localhost:1379/services</wsa10:Address>
+        <wsa10:Address>http://localhost:1410/helloservice</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
           <Upn>DESKTOP-BCL5VMR\aoyo</Upn>
         </Identity>
