@@ -50,6 +50,7 @@
     <Compile Include="MyCustomHeader.cs" />
     <Compile Include="MyEndPointBehavior.cs" />
     <Compile Include="MyMessageInspector.cs" />
+    <Compile Include="MyService_1.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequestMessage.cs" />

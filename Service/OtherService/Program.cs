@@ -41,13 +41,20 @@ namespace OtherService
 
 			//host.Close();
    //         host1.Close();
-			using(ServiceHost host = new ServiceHost(typeof(HelloService)))
-			{
-				host.Opened += (s, e) =>
-				  {
-					  Console.WriteLine("服务已启动");
-				  };
+			//using(ServiceHost host = new ServiceHost(typeof(HelloService)))
+			//{
+			//	host.Opened += (s, e) =>
+			//	  {
+			//		  Console.WriteLine("服务已启动");
+			//	  };
 
+			//	host.Open();
+
+			//	Console.ReadKey();
+			//}
+			using(ServiceHost host = new ServiceHost(typeof(MyService_1)))
+			{
+				host.Opened += (o, e) => { Console.WriteLine("服務已启动"); };
 				host.Open();
 
 				Console.ReadKey();
