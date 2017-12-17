@@ -28,6 +28,14 @@ namespace ClassLibrary
 			if (index != -1)
 			{
 				var header = request.Headers.GetHeader<string>(index);
+				if (header == "admin")
+				{
+					Console.WriteLine("用户名和密码正确。");
+				}
+				else
+				{
+					throw new Exception("验证失败，滚吧！");
+				}
 				Console.WriteLine(header);
 			}
 			//string header = request.Headers.GetHeader<string>(MyCustomHeader.HeaderTitle, MyCustomHeader.HeaderNS);
@@ -52,9 +60,7 @@ namespace ClassLibrary
 			//Console.WriteLine("服务器端：接收到的请求：\n{0}", request.ToString());
 			// 插入验证信息
 			MessageHeader hdUserName = MessageHeader.CreateHeader(MyCustomHeader.HeaderTitle, MyCustomHeader.HeaderNS, "admin");
-			Console.WriteLine("1111");
 			request.Headers.Add(hdUserName);
-			Console.WriteLine(request);
 			return null;
 		}
 	}
