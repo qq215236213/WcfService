@@ -23,6 +23,15 @@
   <wsdl:message name="IMyService_1_GetValue_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetValueResponse" />
   </wsdl:message>
+  <wsdl:message name="IMyService_1_CallServiceOp_InputMessage">
+    <wsdl:part name="parameters" element="tns:CallServiceOp" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_1_End_InputMessage">
+    <wsdl:part name="parameters" element="tns:End" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_1_CallClient_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:CallClient" />
+  </wsdl:message>
   <wsdl:portType msc:usingSession="true" name="IMyService_1">
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SetValue">
       <wsdl:input wsaw:Action="http://tempuri.org/IMyService_1/SetValue" message="tns:IMyService_1_SetValue_InputMessage" />
@@ -30,6 +39,15 @@
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetValue">
       <wsdl:input wsaw:Action="http://tempuri.org/IMyService_1/GetValue" message="tns:IMyService_1_GetValue_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMyService_1/GetValueResponse" message="tns:IMyService_1_GetValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="CallServiceOp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService_1/CallServiceOp" message="tns:IMyService_1_CallServiceOp_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="true" name="End">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService_1/End" message="tns:IMyService_1_End_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="CallClient">
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService_1/CallClient" message="tns:IMyService_1_CallClient_OutputCallbackMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_IMyService_1" type="tns:IMyService_1">
@@ -46,6 +64,24 @@
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CallServiceOp">
+      <soap12:operation soapAction="http://tempuri.org/IMyService_1/CallServiceOp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="End">
+      <soap12:operation soapAction="http://tempuri.org/IMyService_1/End" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="CallClient">
+      <soap12:operation soapAction="http://tempuri.org/IMyService_1/CallClient" style="document" />
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>

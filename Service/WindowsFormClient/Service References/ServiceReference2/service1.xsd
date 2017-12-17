@@ -19,4 +19,21 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="CallServiceOp">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="End">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CallClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="v" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

@@ -22,3 +22,4 @@ C:\Users\dell-64\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsF
 C:\Users\aoyo\Desktop\WcfService\Service\WindowsFormClient\bin\Debug\ClassLibrary.dll
 C:\Users\aoyo\Desktop\WcfService\Service\WindowsFormClient\bin\Debug\ClassLibrary.pdb
 C:\Users\aoyo\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsFormClient.Form2.resources
+C:\Users\aoyo\Desktop\WcfService\Service\WindowsFormClient\obj\Debug\WindowsFormClient.Form3.resources
