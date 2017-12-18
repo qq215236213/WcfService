@@ -20,3 +20,5 @@ C:\Users\aoyo\Desktop\WcfService\Service\Service\obj\Debug\Service.exe
 C:\Users\aoyo\Desktop\WcfService\Service\Service\obj\Debug\Service.pdb
 C:\Users\dell-64\Desktop\WcfService\Service\Service\bin\Debug\ClassLibrary.dll
 C:\Users\dell-64\Desktop\WcfService\Service\Service\bin\Debug\ClassLibrary.pdb
+C:\Users\aoyo\Desktop\WcfService\Service\Service\bin\Debug\ClassLibrary.dll
+C:\Users\aoyo\Desktop\WcfService\Service\Service\bin\Debug\ClassLibrary.pdb

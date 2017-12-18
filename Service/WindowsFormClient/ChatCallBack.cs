@@ -10,7 +10,10 @@ namespace WindowsFormClient
     {
         public void SendToClients(string nick, string msg, DateTime sendTime)
         {
-            throw new NotImplementedException();
+            if(this.MessageReceived!= null)
+			{
+				this.MessageReceived(this, new CallbackRecEventArgs(nick, msg, sendTime));
+			}
         }
 
         /// <summary>
