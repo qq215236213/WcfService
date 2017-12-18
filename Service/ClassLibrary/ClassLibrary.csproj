@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="ArtistInfo.cs" />
     <Compile Include="CarMessage.cs" />
+    <Compile Include="ChatService.cs" />
     <Compile Include="CustomService.cs" />
     <Compile Include="MessageInspectorExtensionElement.cs" />
     <Compile Include="MyCustomHeader.cs" />

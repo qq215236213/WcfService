@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
@@ -34,16 +35,28 @@ namespace Service
 			//	Console.Read();
 			//}
 
-			using(ServiceHost host = new ServiceHost(typeof(MyService1)))
-			{
-				host.Opened += (sender, e) => {
-					Console.WriteLine("服务已启动");
-				};
+			//using(ServiceHost host = new ServiceHost(typeof(MyService1)))
+			//{
+			//	host.Opened += (sender, e) => {
+			//		Console.WriteLine("服务已启动");
+			//	};
 
-				host.Open();
+			//	host.Open();
 
-				Console.Read();
-			}
+			//	Console.Read();
+			//}
+
+            using(ServiceHost host = new ServiceHost(typeof(ChatService)))
+            {
+                host.Opened += (sender, e) =>
+                {
+                    Console.WriteLine("服务已启动");
+                };
+
+                host.Open();
+
+                Console.Read();
+            }
         }
     }
 }
